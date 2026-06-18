@@ -1,16 +1,3 @@
-"""ArticulationCfgs for Maver_X4 (8-wheel skid-steer chassis).
-
-USD: base_model/hex_usd_maver_x4/maver_x4.usd
-
-Note: X4 URDF has 8 fixed joints, converted USD has 0 driveable joints
-by default. Two variants are provided:
-
-- ``HEX_ISAAC_USD_X4_RIGID_CFG`` — 0-joint articulation, whole chassis as
-  a single rigid body (joint_pos={}, joint_vel={}, actuators={}).
-- ``HEX_ISAAC_USD_X4_STEER_CFG`` — articulated variant with steering + drive
-  actuator groups (requires the USD to have non-fixed joints).
-- ``HEX_ISAAC_USD_MAVER_X4_CFG`` — alias for the steer variant.
-"""
 
 from __future__ import annotations
 
@@ -22,25 +9,7 @@ import hex_isaac_usd
 
 _HEX_USD_PATH = hex_isaac_usd.HEX_ASSETS_DIR / "hex_usd_maver_x4" / "maver_x4.usd"
 
-HEX_ISAAC_USD_X4_RIGID_CFG = ArticulationCfg(
-    spawn=sim_utils.UsdFileCfg(
-        usd_path=str(_HEX_USD_PATH),
-        rigid_props=sim_utils.RigidBodyPropertiesCfg(
-            disable_gravity=False,
-            max_depenetration_velocity=1.0,
-        ),
-        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
-            enabled_self_collisions=False,
-            solver_position_iteration_count=32,
-            solver_velocity_iteration_count=16,
-        ),
-        activate_contact_sensors=False,
-    ),
-    init_state=ArticulationCfg.InitialStateCfg(joint_pos={}, joint_vel={}),
-    actuators={},
-)
-
-HEX_ISAAC_USD_X4_STEER_CFG = ArticulationCfg(
+HEX_ISAAC_USD_MAVER_X4_CFG = ArticulationCfg(
     spawn=sim_utils.UsdFileCfg(
         usd_path=str(_HEX_USD_PATH),
         rigid_props=sim_utils.RigidBodyPropertiesCfg(
@@ -72,5 +41,3 @@ HEX_ISAAC_USD_X4_STEER_CFG = ArticulationCfg(
         ),
     },
 )
-
-HEX_ISAAC_USD_MAVER_X4_CFG = HEX_ISAAC_USD_X4_STEER_CFG

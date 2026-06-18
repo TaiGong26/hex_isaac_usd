@@ -34,9 +34,9 @@ HEX_ISAAC_USD_LOTAP_CFG = ArticulationCfg(
     actuators={
         "lift": ImplicitActuatorCfg(
             joint_names_expr=["joint_1"],
-            effort_limit_sim=50.0,
-            stiffness=100.0,
-            damping=10.0,
+            effort_limit_sim=100.0,
+            stiffness=5000.0,
+            damping=500.0,
         ),
     },
 )

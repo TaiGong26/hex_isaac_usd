@@ -1,10 +1,3 @@
-"""ArticulationCfg for Zeta_VC2 (3-DOF arm).
-
-USD: base_model/hex_usd_zeta_vc2/zeta_vc2.usd
-
-Note: stiffness/damping override USD defaults (1.7453 / 0.1745) with tuned values.
-"""
-
 from __future__ import annotations
 
 import isaaclab.sim as sim_utils
