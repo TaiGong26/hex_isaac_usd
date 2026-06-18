@@ -5,8 +5,8 @@ from setuptools import setup
 setup(
     name="hex_isaac_usd",
     version="0.1.0",
-    description="HEX USD robot assets for Isaac Lab",
-    packages=["hex_isaac_usd"],
+    description="HEX USD robot assets and ArticulationCfgs for Isaac Lab",
+    packages=["hex_isaac_usd", "hex_isaac_usd.configs"],
     package_dir={"hex_isaac_usd": "."},
     package_data={
         "hex_isaac_usd": [
@@ -15,6 +15,7 @@ setup(
             "base_model/**/*.yaml",
             "base_model/**/.asset_hash",
             "base_model/**/configuration/*.usd",
+            "base_model/**/.thumbs/**/*.png",
             "*.md",
         ],
     },
