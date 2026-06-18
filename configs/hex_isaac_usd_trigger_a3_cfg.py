@@ -1,8 +1,3 @@
-"""ArticulationCfg for Trigger_A3 (3-wheeled mobile base).
-
-USD: base_model/hex_usd_Trigger_A3/trigger_a3.usd
-"""
-
 from __future__ import annotations
 
 import isaaclab.sim as sim_utils
