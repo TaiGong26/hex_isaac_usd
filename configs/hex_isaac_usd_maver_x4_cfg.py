@@ -27,16 +27,16 @@ HEX_ISAAC_USD_MAVER_X4_CFG = ArticulationCfg(
     actuators={
         "steering": ImplicitActuatorCfg(
             joint_names_expr=["joint_yaw.*"],
-            stiffness=100.0,
-            damping=50.0,
-            effort_limit_sim=80.0,
-            velocity_limit_sim=10.0,
+            stiffness=400.0,
+            damping=20.0,
+            effort_limit_sim=50.0,
+            velocity_limit_sim=20.0,
         ),
         "drive": ImplicitActuatorCfg(
             joint_names_expr=["joint_wheel.*"],
             stiffness=0.0,
-            damping=50.0,
-            effort_limit_sim=80.0,
+            damping=200.0,
+            effort_limit_sim=40.0,
             velocity_limit_sim=20.0,
         ),
     },
