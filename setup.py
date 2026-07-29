@@ -6,7 +6,22 @@ setup(
     name="hex_isaac_usd",
     version="0.1.0",
     description="HEX USD robot assets and ArticulationCfgs for Isaac Lab",
-    packages=["hex_isaac_usd", "hex_isaac_usd.configs"],
+    packages=[
+        "hex_isaac_usd",
+        "hex_isaac_usd.configs",
+        "hex_isaac_usd.configs.manipulator",
+        "hex_isaac_usd.configs.manipulator.archer_y6",
+        "hex_isaac_usd.configs.manipulator.firefly_y6",
+        "hex_isaac_usd.configs.gripper",
+        "hex_isaac_usd.configs.gripper.gr100",
+        "hex_isaac_usd.configs.lift",
+        "hex_isaac_usd.configs.lift.iotavc1",
+        "hex_isaac_usd.configs.lift.lotaP",
+        "hex_isaac_usd.configs.lift.zeta_vc2",
+        "hex_isaac_usd.configs.chassis",
+        "hex_isaac_usd.configs.chassis.Trigger_A3",
+        "hex_isaac_usd.configs.chassis.maver_x4",
+    ],
     package_dir={"hex_isaac_usd": "."},
     package_data={
         "hex_isaac_usd": [
