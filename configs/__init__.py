@@ -11,6 +11,7 @@ Usage::
 # Re-export all configs for convenient access
 from hex_isaac_usd.configs.manipulator.archer_y6.archer_y6_cfg import (
     HEX_ISAAC_USD_ARCHER_Y6_CFG,
+    HEX_ISAAC_USD_ARCHER_Y6_GP100_CFG,
     HEX_ISAAC_USD_ARCHER_Y6_GR100_CFG,
 )
 from hex_isaac_usd.configs.manipulator.firefly_y6.firefly_y6_cfg import (
@@ -37,6 +38,7 @@ from hex_isaac_usd.configs.chassis.maver_x4.maver_x4_cfg import (
 
 __all__ = [
     "HEX_ISAAC_USD_ARCHER_Y6_CFG",
+    "HEX_ISAAC_USD_ARCHER_Y6_GP100_CFG",
     "HEX_ISAAC_USD_ARCHER_Y6_GR100_CFG",
     "HEX_ISAAC_USD_FIREFLY_Y6_CFG",
     "HEX_ISAAC_USD_GR100_CFG",
