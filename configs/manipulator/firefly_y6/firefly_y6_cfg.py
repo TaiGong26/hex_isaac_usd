@@ -20,20 +20,22 @@ _HEX_USD_PATH = (
     / "firefly_y6.usd"
 )
 
-HEX_ISAAC_USD_FIREFLY_Y6_CFG = ArticulationCfg(
-    spawn=sim_utils.UsdFileCfg(
-        usd_path=str(_HEX_USD_PATH),
-        rigid_props=sim_utils.RigidBodyPropertiesCfg(
-            disable_gravity=False,
-            max_depenetration_velocity=5.0,
-        ),
-        articulation_props=sim_utils.ArticulationRootPropertiesCfg(
-            enabled_self_collisions=False,
-            solver_position_iteration_count=8,
-            solver_velocity_iteration_count=0,
-        ),
-        activate_contact_sensors=False,
-    ),
-    init_state=ArticulationCfg.InitialStateCfg(),
-    actuators={},
-)
+# HEX_ISAAC_USD_FIREFLY_Y6_CFG = ArticulationCfg(
+#     spawn=sim_utils.UsdFileCfg(
+#         usd_path=str(_HEX_USD_PATH),
+#         rigid_props=sim_utils.RigidBodyPropertiesCfg(
+#             disable_gravity=False,
+#             max_depenetration_velocity=5.0,
+#         ),
+#         articulation_props=sim_utils.ArticulationRootPropertiesCfg(
+#             enabled_self_collisions=False,
+#             solver_position_iteration_count=8,
+#             solver_velocity_iteration_count=0,
+#         ),
+#         activate_contact_sensors=False,
+#     ),
+#     init_state=ArticulationCfg.InitialStateCfg(),
+#     actuators={},
+# )
+
+HEX_ISAAC_USD_FIREFLY_Y6_CFG = None

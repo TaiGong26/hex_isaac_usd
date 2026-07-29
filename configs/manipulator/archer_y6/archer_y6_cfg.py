@@ -7,6 +7,9 @@ Contains configs for all Archer_Y6 variants:
 
 - ``HEX_ISAAC_USD_ARCHER_Y6_GR100_CFG``: 8-DOF fused arm + GP100 gripper
   (USD: hex_usd_archer_y6_gr100/archer_gripper.usd)
+
+``HEX_ISAAC_USD_ARCHER_Y6_GP100_CFG`` is kept as an alias of ``GR100_CFG``
+for backward compatibility with existing demo scripts.
 """
 
 from __future__ import annotations
@@ -140,3 +143,6 @@ HEX_ISAAC_USD_ARCHER_Y6_GR100_CFG = ArticulationCfg(
         ),
     },
 )
+
+# Backward-compatible alias (was renamed from GP100 to GR100)
+HEX_ISAAC_USD_ARCHER_Y6_GP100_CFG = HEX_ISAAC_USD_ARCHER_Y6_GR100_CFG
