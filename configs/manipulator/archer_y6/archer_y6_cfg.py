@@ -58,20 +58,19 @@ HEX_ISAAC_USD_ARCHER_Y6_CFG = ArticulationCfg(
         },
     ),
     actuators={
-        "arm": ImplicitActuatorCfg(
+        "archer_y6": ImplicitActuatorCfg(
             joint_names_expr=["joint_[1-6]"],
             effort_limit_sim={
                 "joint_[1-3]": 25.0,
                 "joint_[4-6]": 6.0,
             },
             stiffness={
-                "joint_[1-2]": 400.0,
-                "joint_3": 500.0,
+                "joint_[1-3]": 400.0,
                 "joint_4": 200.0,
                 "joint_[5-6]": 100.0,
             },
             damping={
-                "joint_[1-4]": 20.0,
+                "joint_[1-4]": 5.0,
                 "joint_[5-6]": 2.0,
             },
         ),
@@ -118,24 +117,23 @@ HEX_ISAAC_USD_ARCHER_Y6_GR100_CFG = ArticulationCfg(
         },
     ),
     actuators={
-        "arm": ImplicitActuatorCfg(
+        "archer_y6": ImplicitActuatorCfg(
             joint_names_expr=["joint_[1-6]"],
             effort_limit_sim={
                 "joint_[1-3]": 25.0,
                 "joint_[4-6]": 6.0,
             },
             stiffness={
-                "joint_[1-2]": 400.0,
-                "joint_3": 500.0,
+                "joint_[1-3]": 400.0,
                 "joint_4": 200.0,
                 "joint_[5-6]": 100.0,
             },
             damping={
-                "joint_[1-4]": 20.0,
+                "joint_[1-4]": 5.0,
                 "joint_[5-6]": 2.0,
             },
         ),
-        "gp100": ImplicitActuatorCfg(
+        "grip": ImplicitActuatorCfg(
             joint_names_expr=["J[12]"],
             effort_limit_sim=10.0,
             stiffness=100.0,
