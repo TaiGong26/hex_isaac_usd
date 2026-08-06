@@ -33,6 +33,9 @@ HEX_ISAAC_USD_TRIGGER_A3_CFG = ArticulationCfg(
         ),
         activate_contact_sensors=False,
     ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={"joint_1": 0.0, "joint_2": 0.0, "joint_3": 0.0},
+    ),
     actuators={
         "drive_wheels": ImplicitActuatorCfg(
             joint_names_expr=["joint_[1-3]"],

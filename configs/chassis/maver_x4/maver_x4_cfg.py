@@ -34,15 +34,27 @@ HEX_ISAAC_USD_MAVER_X4_CFG = ArticulationCfg(
         ),
         activate_contact_sensors=False,
     ),
+    init_state=ArticulationCfg.InitialStateCfg(
+        joint_pos={
+            "joint_yaw1": 0.0,
+            "joint_yaw2": 0.0,
+            "joint_yaw3": 0.0,
+            "joint_yaw4": 0.0,
+            "joint_wheel1": 0.0,
+            "joint_wheel2": 0.0,
+            "joint_wheel3": 0.0,
+            "joint_wheel4": 0.0,
+        },
+    ),
     actuators={
-        "steering": ImplicitActuatorCfg(
+        "maver_x4_steering": ImplicitActuatorCfg(
             joint_names_expr=["joint_yaw.*"],
             stiffness=400.0,
             damping=20.0,
             effort_limit_sim=50.0,
             velocity_limit_sim=20.0,
         ),
-        "drive": ImplicitActuatorCfg(
+        "maver_x4_driver": ImplicitActuatorCfg(
             joint_names_expr=["joint_wheel.*"],
             stiffness=0.0,
             damping=200.0,
@@ -51,3 +63,5 @@ HEX_ISAAC_USD_MAVER_X4_CFG = ArticulationCfg(
         ),
     },
 )
+
+
