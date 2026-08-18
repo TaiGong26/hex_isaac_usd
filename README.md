@@ -10,12 +10,12 @@ for each robot variant and pre-defined `ArticulationCfg`.
 ```
 hex_isaac_usd/
 ├── base_model/    # USD models for each robot variant
-├── configs/       # Pre-defined ArticulationCfgs, importable via hex_isaac_usd.configs
+├── isaaclab_cfg/  # Pre-defined ArticulationCfgs, importable via hex_isaac_usd.isaaclab_cfg
 └── setup.py       # pip editable install entry
 ```
 
 > ⚠️ **About `ImplicitActuatorCfg` parameters**:
 > - The `stiffness`, `damping`, `effort_limit`, etc. parameters in each CFG
-> under `configs/` **are NOT the actual robot's torque or PD values**.
+> under `isaaclab_cfg/` **are NOT the actual robot's torque or PD values**.
 > - They are chosen to keep the visual appearance and basic motion reachability
 > in simulation, and must not be used for parameter selection on the real robot.
